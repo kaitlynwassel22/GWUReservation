@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GWU Duques Hall Reservation System</title>
+    <link rel="stylesheet" href="calendar.css">
+    <script src="calendar.js"></script> 
+    <script>
+        // Check if user is logged in
+        const userEmail = localStorage.getItem("userEmail");
+      
+        if (!userEmail) {
+          // Redirect if not logged in
+          window.location.href = "login.html";
+        }
+      </script>
+</head>
+<body>
+    
+</body>
+</html>
+<div class="calendar-header">
+    <button id="prevBtn">&lt;</button>
+    <span id="weekDisplay">Week of Mar 25 - Mar 31</span>
+    <button id="nextBtn">&gt;</button>
+  </div>
+  
+  <div class="calendar-grid" id="calendarGrid">
+    <div class="row header">
+      <div class="cell">Room / Time</div>
+      <!-- Times dynamically inserted -->
+    </div>
+    <!-- Room rows dynamically inserted -->
+  </div>
