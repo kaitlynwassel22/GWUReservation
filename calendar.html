@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GWU Duques Hall Reservation System</title>
+    <link rel="stylesheet" href="calendar.css">
+    <script src="calendar.js"></script> 
+    <script>
+        // Check if user is logged in
+        const userEmail = localStorage.getItem("userEmail");
+      
+        if (!userEmail) {
+          // Redirect if not logged in
+          window.location.href = "loginpage.html";
+        }
+      </script>
+</head>
+<body>
+    
+</body>
+</html>
+<div class="room-rules">
+    <h1>Duques Hall Study Room Policies</h1>
+    <p>A GWorld card enabled for campus access is required for entrance to Duques Hall.<br>
+
+        Access to the reservation software is only available using an @gwu.edu account. <br>
+        
+        Rooms are available for reservation on a first come, first served basis.<br>
+        Reservations may be placed up to two weeks in advance.<br>
+        A student may place up to 2 hours of reservations each day.<br>
+        When not reserved, an open study room may be used by one or more people for study. If someone arrives with a reservation, the room must be vacated for their use immediately. <br>
+        Windows may not be covered for any reason. Anyone found inside a study room with the windows covered may be banned from future room reservations. </p>
+</div>
+<div class="calendar-header">
+    <button id="prevBtn">&lt;</button>
+    <span id="weekDisplay">Week of Mar 25 - Mar 31</span>
+    <button id="nextBtn">&gt;</button>
+  </div>
+  
+  <div class="calendar-grid" id="calendarGrid">
+    <div class="row header">
+      <div class="cell">Room / Time</div>
+      <!-- Times dynamically inserted -->
+    </div>
+    <!-- Room rows dynamically inserted -->
+  </div>

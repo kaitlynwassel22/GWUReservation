@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Duques Hall Reservation System</title>
+  <link rel="stylesheet" href="loginpage.css">
+</head>
+<body>
+    <h1>Please Login with Your GWU Email</h1>
+  <form id="loginForm">
+    <input type="email" id="email" placeholder="Enter your GWU email" required>
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+    const email = document.getElementById("email").value.toLowerCase();
+    let userRole="";
+    // Login page to see if they are a GWU Student, Staff, or Faculty
+    if (email.endsWith("@admin.gwu.edu")) {
+        // Save session info for admin
+        userRole="admin";
+    }
+    else if(email.endsWith("@email.gwu.edu")){
+        userRole="faculty";
+    }
+    else if(email.endsWith("@gwu.edu")){
+        userRole="student";
+    }
+    else {
+        alert("Please use your GWU email.");
+        return;
+    }
+    //store email and what type of user they are
+    localStorage.setItem("userEmail", email);
+    localStorage.setItem("userRole",userRole);
+    //If login successful, redirect to the calendar
+    window.location.href = "calendar.html";
+});
+  </script>
+</body>
+</html>

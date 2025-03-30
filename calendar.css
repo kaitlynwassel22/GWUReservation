@@ -1,0 +1,46 @@
+h1{
+    text-align:center;
+}
+.calendar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: 150px repeat(16, 1fr); /* Adjust based on time slots */
+    gap: 1px;
+    background: #ccc;
+  }
+  
+  .row {
+    display: contents;
+  }
+  
+  .cell {
+    padding: 10px;
+    text-align: center;
+    background: white;
+    border: 1px solid #ccc;
+  }
+  
+  .cell.available {
+    background: #d4edda;
+    cursor: pointer;
+  }
+  
+  .cell.reserved {
+    background: #f8d7da;
+  }
+  
+  .cell.selected {
+    background: #bee5eb;
+  }
+  
+  .header .cell {
+    font-weight: bold;
+    background: #f1f1f1;
+  }
