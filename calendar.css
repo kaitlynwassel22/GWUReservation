@@ -92,3 +92,6 @@ body {
   .cell.selected {
     background: #bee5eb;
   }
+  footer{
+    text-align: center;
+  }

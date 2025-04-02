@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GWU Duques Hall Reservation System</title>
     <link rel="stylesheet" href="calendar.css">
-    <script src="calendar.js"></script> 
+    
     <script>
         // Check if user is logged in
         const userEmail = localStorage.getItem("userEmail");
@@ -17,9 +17,11 @@
       </script>
 </head>
 <body>
-    
-</body>
-</html>
+  <div id="admin-tools" style="display: none;">
+    <button onclick="downloadAllReservations()">Download Reservations</button>
+  </div>
+
+
 <div class="room-rules">
     <h1>Duques Hall Study Room Policies</h1>
     <p>A GWorld card enabled for campus access is required for entrance to Duques Hall.<br>
@@ -34,7 +36,7 @@
 </div>
 <div class="calendar-header">
     <button id="prevBtn">&lt;</button>
-    <span id="weekDisplay">Week of Mar 25 - Mar 31</span>
+    <span id="dayDisplay">April 16, 2025</span>
     <button id="nextBtn">&gt;</button>
   </div>
   
@@ -45,3 +47,9 @@
     </div>
     <!-- Room rows dynamically inserted -->
   </div>
+  <script src="calendar.js"></script> 
+  <footer>
+    <p>For issues contact: facilities@gwu.edu</p>
+  </footer>
+</body>
+</html>
